@@ -1,0 +1,69 @@
+header {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar{
+        ul{
+            list-style-type: none;
+        }
+    }
+
+    .icon-hamburger{
+        cursor: pointer;
+    }
+
+    .sidebar{
+        border: 2px dotted blue;
+        display: none;
+        background-color: white;
+        width: 60vw;
+        height: 100vh;
+        padding: 0 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .close-menu{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        ul{
+            margin-top: 5rem;
+            li{
+                color: var(--gray);
+                margin: 1.5rem 0;
+            }
+        }
+
+        .login-section{
+            display: flex;
+            flex-direction: column;
+
+            .login-btn{
+                background-color: transparent;
+                border: none;
+                color: var(--gray);
+                font-family: inherit;
+                font-size: inherit;
+                padding: .8rem 1rem;
+            }
+
+            .register-btn{
+                background-color: transparent;
+                border: 2px solid var(--gray);
+                border-radius: 1rem;
+                color: var(--gray);
+                font-family: inherit;
+                font-size: inherit;
+                padding: .8rem 1rem;
+            }
+        }
+
+    }
+}
