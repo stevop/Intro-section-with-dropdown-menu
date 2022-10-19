@@ -50,7 +50,7 @@ header {
         right: 0;
 
         @media only screen and (min-width: 1024px){
-            display: flex;
+            display: block;
 
             background-color: transparent;
             height: fit-content;
@@ -142,8 +142,12 @@ header {
 
 .dd-menu{
     position: relative;
+    transition: transform linear 0.3s;
 
      &:focus, &:hover {
+        img{
+            transform: rotate(180deg);
+        }
         .dd-menu-item{
             opacity: 1;
             pointer-events: all;
@@ -162,7 +166,7 @@ header {
     pointer-events: none;
 
     border-radius: 1rem;
-    box-shadow: 2px 2px 2px rgb(151, 151, 151);
+    box-shadow: 2px 2px 1px rgba(151, 151, 151, 0.77);
     margin-top: 0;
     width: 100%;
 
