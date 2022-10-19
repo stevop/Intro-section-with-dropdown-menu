@@ -76,8 +76,8 @@ header .sidebar {
   height: 100vh;
   padding: 0 1rem;
   position: absolute;
-  top: 0px;
-  right: 0;
+  top: -15px;
+  right: -10px;
 }
 @media only screen and (min-width: 1024px) {
   header .sidebar {
