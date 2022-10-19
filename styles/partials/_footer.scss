@@ -4,8 +4,26 @@ footer{
     gap: 1.5rem;
 
     margin-top: 2rem;
-
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 375px;
+    padding: 2rem;
+    
     img{
         width: 70px;
+    }
+    
+}
+
+@media only screen and (min-width: 1024px){
+    footer{
+        align-items: center;
+        justify-content: center;
+        
+        max-width: 100%;
+            img{
+                width: 150px;
+                justify-self: center;
+            }
     }
 }

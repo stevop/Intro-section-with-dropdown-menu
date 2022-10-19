@@ -1,4 +1,5 @@
 main{
+
     img{
         
         height: auto;
@@ -20,7 +21,7 @@ main{
 
     button{
         background-color: var(--almost-black);
-        border: none;
+        border: 2px solid var(--almost-black);
         border-radius: 1rem;
         color: var(--almost-white);
         cursor: pointer;
@@ -33,5 +34,47 @@ main{
         margin-top: 1rem;
         outline: none;
         padding: .8rem 1rem;
+        transition: ease-in-out 0.3s all;
+        &:hover{
+            background-color: var(--almost-white);
+            color: var(--almost-black);
+        }
+    }
+    @media only screen and (min-width: 1024px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        picture{
+            order: 1;
+            height: auto;
+            width: 80%;
+        }
+
+        .main-content{
+            padding: 0 3rem;
+
+            h1{
+                font-size: 4.5rem;
+                margin-bottom: 1.5rem;
+                text-align: left;
+            }
+            p{
+                font-size: 1.5rem;
+                line-height: 1.8;
+                margin-bottom: 1.5rem;
+                text-align: left;
+            }
+            button{
+                border: 2px solid var(--almost-black);
+                display: inline-block;
+                font-size: 1.5rem;
+                transition: ease-in-out 0.3s all;
+                &:hover{
+                    background-color: var(--almost-white);
+                    color: var(--almost-black);
+                }
+            }
+        }
     }
 }

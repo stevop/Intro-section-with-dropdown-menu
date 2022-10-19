@@ -1,4 +1,7 @@
 header {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
 
     display: flex;
@@ -6,52 +9,113 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (min-width: 1024px){
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 .5rem;
+    }
+
+    .logo{
+        cursor: pointer;
+    }
+
     .navbar{
         ul{
             list-style-type: none;
+
+            @media only screen and (min-width: 1024px){
+                top: 4px;
+            }
         }
     }
 
     .icon-hamburger{
         cursor: pointer;
+        z-index: 100;
+        @media only screen and (min-width: 1024px){
+            display: none;
+        }
     }
 
     .sidebar{
-        border: 2px dotted blue;
         display: none;
+
         background-color: white;
-        width: 60vw;
+        width: 65%;
         height: 100vh;
         padding: 0 1rem;
         position: absolute;
-        top: 0;
+        top: 0px;
         right: 0;
 
-        .close-menu{
-            position: absolute;
+        @media only screen and (min-width: 1024px){
+            display: flex;
+
+            background-color: transparent;
+            height: fit-content;
+            margin-top: 0;
             top: 0;
-            right: 0;
+            left: 0;
+            width: 100%;
         }
 
         ul{
             margin-top: 5rem;
+
+            @media only screen and (min-width: 1024px){
+                margin-top: 0;
+                position: absolute;
+                left: 10rem;
+            }
+
             li{
                 color: var(--gray);
+                cursor: pointer;
                 margin: 1.5rem 0;
+                transition: all 0.3s ease-in-out;
+
+                &:hover{
+                    color: var(--almost-black);
+                }
+
+                @media only screen and (min-width: 1024px){
+                    margin-top: 0;
+                    display: inline-block;
+                    margin-left: 1.5rem;
+                }
             }
         }
 
         .login-section{
-            display: flex;
-            flex-direction: column;
+            display: block;
+            position: absolute;
+            top: 240px;
+            right: 1rem;
+
+            @media only screen and (min-width: 1024px){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                top: -12px;
+            }
 
             .login-btn{
                 background-color: transparent;
                 border: none;
                 color: var(--gray);
+                cursor: pointer;
                 font-family: inherit;
                 font-size: inherit;
+                margin: 0 auto;
                 padding: .8rem 1rem;
+                transition: all 0.3s ease-in-out;
+                width: 95%;
+
+                &:hover{
+                    color: var(--almost-black);
+                }
             }
 
             .register-btn{
@@ -59,11 +123,19 @@ header {
                 border: 2px solid var(--gray);
                 border-radius: 1rem;
                 color: var(--gray);
+                cursor: pointer;
                 font-family: inherit;
                 font-size: inherit;
+                margin: 0 auto;
                 padding: .8rem 1rem;
+                transition: all 0.3s ease-in-out;
+                width: 95%;
+
+                &:hover{
+                    border: solid 2px var(--almost-black);
+                    color: var(--almost-black);
+                }
             }
         }
-
     }
 }
