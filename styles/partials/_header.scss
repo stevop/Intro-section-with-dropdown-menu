@@ -60,7 +60,7 @@ header {
             width: 100%;
         }
 
-        ul{
+        .main-navbar{
             margin-top: 5rem;
 
             @media only screen and (min-width: 1024px){
@@ -136,6 +136,51 @@ header {
                     color: var(--almost-black);
                 }
             }
+        }
+    }
+}
+
+.dd-menu{
+    position: relative;
+
+     &:focus, &:hover {
+        .dd-menu-item{
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+.dd-menu-item{
+    opacity: 0;
+    transition: opacity linear 0.3s;
+    background-color: white;
+    z-index: 150;
+    position: absolute;
+    top:  1rem;
+    left: 0;
+    pointer-events: none;
+
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgb(151, 151, 151);
+    margin-top: 0;
+    width: 100%;
+
+    @media only screen and (min-width: 1024px){
+        padding: .5rem;
+        width: 180px;
+
+        top: 5rem;
+    }
+
+    li{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+
+        &:hover, &:focus{
+            color: var(--almost-black)
         }
     }
 }
