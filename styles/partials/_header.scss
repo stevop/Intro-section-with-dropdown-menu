@@ -131,6 +131,10 @@ header {
                 transition: all 0.3s ease-in-out;
                 width: 95%;
 
+                @media (min-width: 1024px){
+                    margin-left: 3rem;
+                }
+
                 &:hover{
                     border: solid 2px var(--almost-black);
                     color: var(--almost-black);

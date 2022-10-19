@@ -160,6 +160,11 @@ header .sidebar .login-section .register-btn {
   transition: all 0.3s ease-in-out;
   width: 95%;
 }
+@media (min-width: 1024px) {
+  header .sidebar .login-section .register-btn {
+    margin-left: 3rem;
+  }
+}
 header .sidebar .login-section .register-btn:hover {
   border: solid 2px var(--almost-black);
   color: var(--almost-black);
