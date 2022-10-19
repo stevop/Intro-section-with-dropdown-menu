@@ -198,7 +198,9 @@ header .sidebar .login-section .register-btn:hover {
 }
 @media only screen and (min-width: 1024px) {
   .dd-menu-item {
-    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-top: 1.625rem;
+    padding: 0.25rem;
     width: 180px;
     top: 5rem;
   }

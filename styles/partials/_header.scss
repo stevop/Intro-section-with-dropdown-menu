@@ -175,7 +175,9 @@ header {
     width: 100%;
 
     @media only screen and (min-width: 1024px){
-        padding: .5rem;
+        border-radius: 1rem;
+        margin-top: 1.625rem;
+        padding: .25rem;
         width: 180px;
 
         top: 5rem;
